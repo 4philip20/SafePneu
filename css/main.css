@@ -1,0 +1,400 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 1300px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    background-color: #F3f3f3;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    font-weight: 700;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    font-weight: 700;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #FFFFFF;
+}
+
+h2{
+    color: #000;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    font-size: 2.1875rem;
+    line-height: 49px;
+    line-height: 3.0625rem;
+}
+
+.back{
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.bild{
+    display: inline-block;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+#bild{
+    width: 130px;
+}
+
+.abschliessen-text{
+    width: 50%;
+    display: inline-block;
+}
+
+#myBtn{
+    float: right;
+    position: absolute;
+    margin-top: 4%;
+    left: 1200px;
+    height: 36px;
+    background: #1FA12E;
+    border: 1px solid #1FA12E;
+    color: #FFF;
+    line-height: 1.375rem;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#button{
+    height: 36px;
+    background: #1FA12E;
+    border: 1px solid #1FA12E;
+    color: #FFF;
+    line-height: 1.375rem;
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    width: 83%;
+}
+
+#unsichtbar{
+    display: none;
+}
+
+.label{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif;
+
+}
+
+.input{
+    width: 500px;
+    height: 32px;
+    /*margin-top: 8px;*/
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.input-strasse{
+    /*width: 396px;*/
+    height: 32px;
+    width: 500px;
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.input-tele{
+    /*width: 396px;*/
+    width: 500px;
+    height: 32px;
+
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border: 1px solid #c1c1c1;
+    /*margin-left: 3px;*/
+    font-family: 'Open Sans',sans-serif;
+}
+
+.input-number{
+    width: 92px;
+    height: 32px;
+
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.input-vkdatum{
+    width: 130px;
+    height: 34px;
+    padding-right: 20px;
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.input-vkpreis{
+    width: 218px;
+    height: 32px;
+    padding-right: 17px;
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border: 1px solid #c1c1c1;
+    text-align: right;
+    font-family: 'Open Sans',sans-serif;
+}
+.input-vorname{
+    width: 395px;
+    height: 32px;
+
+    margin-bottom: 8px;
+    padding-left: 6px;
+    margin-left: 3px;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.selectoption{
+    width: 102px;
+    height: 36px;
+    margin-bottom: 8px;
+    float: left;
+    padding-left: 6px;
+    background-color: #FFFFFF;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.selectoption-full{
+    width: 510px;
+    height: 32px;
+    margin-bottom: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #c1c1c1;
+    font-family: 'Open Sans',sans-serif;
+
+}
+
+.float-verkaufer{
+    display: inline-block;
+    float: left;
+    margin-right: 30px;
+    font-family: 'Open Sans',sans-serif;
+    /*float: left;*/
+    /*height: 15000px;*/
+}
+
+.float-kaufer{
+    /*display: inline-block;*/
+    /*float: left;*/
+    /*height: 15000px;*/
+}
+
+.float-sonstige{
+    display: inline-block;
+    width: 600px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.radiobutton-button{
+    float: left;
+
+}
+.radiobutton-div{
+    margin-left: 30px;
+}
+
+#white{
+    background-color: #FFFFFF;
+    padding-right: 20px;
+    width: 480px;
+}
+
+#whitee{
+    background-color: #FFFFFF;
+}
+
+#grau{
+    background-color: #f2f2f2;
+}
+
+.logo{
+    height: 50px;
+    float: left;
+}
+
+.pfeil{
+    height: 20px;
+    float: left;
+}
+
+input:invalid{
+    background-image: url(checkMark2.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    /*border: 1px solid red;*/
+}
+
+input:valid{
+    background-image: url(checkMark.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+
+}
+
+.errormsg{
+    margin-left: 104px;
+    color: #dc4140;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+
+    }
+    #person, #person * {
+        visibility: visible;
+        /*color: white;*/
+        margin: 0;
+        font-family: 'Open Sans',sans-serif;
+    }
+    #person {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+
+    .float-verkaufer{
+        display: inline-block;
+        float: left;
+        margin-right: 100px;
+        font-family: 'Open Sans',sans-serif;
+        width: 450px;
+        /*float: left;*/
+        /*height: 15000px;*/
+
+    }
+
+    .float-sonstige{
+        display: inline-block;
+        font-family: 'Open Sans',sans-serif;
+    }
+
+
+    .input{
+        width: 400px;
+        height: 32px;
+        /*margin-top: 8px;*/
+        margin-bottom: 8px;
+        padding-left: 6px;
+        border: 1px solid #c1c1c1;
+        font-family: 'Open Sans',sans-serif;
+    }
+    .input-vorname {
+        width: 298px;
+    }
+
+    .input-strasse{
+        width: 400px;
+    }
+
+    .selectoption-full{
+        width: 410px;
+    }
+
+    .input-tele{
+        width: 400px;
+    }
+
+    #white{
+        width: 380px;
+    }
+
+    .input-vkpreis{
+        width: 120px;
+    }
+
+    div.printdelete {
+        display: none !important;
+    }
+
+}
