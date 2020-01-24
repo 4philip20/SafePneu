@@ -4,27 +4,40 @@
 class menu
 {
 
-    public function setMenu($lv_sprache)
+    public function setMenu()
     {
+        /*
         if ($lv_sprache == "fr") {
             //Französisch
-            require_once("include/sprache/fr_langVariable.php");
+            require_once("/safepneu/include/sprache/fr_langVariable.php");
         } elseif ($lv_sprache == "it") {
             //Italienisch
-            require_once("include/sprache/it_langVariable.php");
+            require_once("/safepneu/include/sprache/it_langVariable.php");
         } else {
             //Deutsch
+            require_once("/safepneu/include/sprache/de_langVariable.php");
+        }
+        */
+        if (!isset($_GET["lang"])) {      // Wenn nicht vorhanden
+            require_once("include/sprache/de_langVariable.php");
+        } else if ($_GET["lang"] == "fr") {
+            require_once("include/sprache/fr_langVariable.php");
+        } else if ($_GET["lang"] == "it") {
+            require_once("include/sprache/it_langVariable.php");
+        } else {
             require_once("include/sprache/de_langVariable.php");
         }
 
         $lv_result = "
-<body>
+<body style='height: 1300px;
+             width: 1630px;'>
+             
 <!-- TODO Übersetzung 
 <div id=\"google_translate_element\"></div>
 -->
-        <img src=\"Bilder/icon.png\" class=\"logo\">
+        <img src=\"/safepneu/Bilder/icon.png\" class=\"logo\">
 <h2>" . $GLOBALS["titel"] . "</h2>
-<img src=\"Bilder/pfeil.png\" class=\"pfeil\">
+<img src=\"/safepneu/Bilder/pfeil.png\" class=\"pfeil\">
 <p class=\"back\">" . $GLOBALS["back2uebersicht"] . "</p>
 <div class=\"tab\">";
 
@@ -45,18 +58,18 @@ class menu
     <button class=\"tablinks active\" onclick=\"openCity(event, 'ueberischt')\">" . $GLOBALS["meinegarantien"] . "</button>";
         }
 
-
         $lv_result = $lv_result . "
 </div>
 <div id=\"abschliessen\" class=\"tabcontent\" >
     <div class=\"bild\">
-        <img src=\"Bilder/safepneu_logo.jpg\" id=\"bild\">
+        <img src=\"/safepneu/Bilder/safepneu_logo.jpg\" id=\"bild\">
     </div>
     <div class=\"abschliessen-text\">
         <h3>" . $GLOBALS["titel"] . "</h3>
         <p>" . $GLOBALS["titel_beschreibung"] . "</p>
+        <button id=\"myBtn\">" . $GLOBALS["garantieabschliessen"] . "</button>
     </div>
-    <button id=\"myBtn\">" . $GLOBALS["garantieabschliessen"] . "</button>";
+    ";
         //FORMULAR ausgabe nach Bedingung formlesen
         if (!isset($_GET["formlesen"]) or $_GET["formlesen"] == '0'){
             include 'include/formular_empty.php';       //Falls nichts gesetzt
@@ -73,8 +86,8 @@ class menu
     <h3>" . $GLOBALS["uebersicht"] . "</h3>
 </div>
 
-<script type=\"text/javascript\" src=\"include/javascript.js\"></script>
-<script type=\"text/javascript\" src=\"include/get_material_info.js\"></script>
+<script type=\"text/javascript\" src=\"/safepneu/include/javascript.js\"></script>
+<script type=\"text/javascript\" src=\"/safepneu/include/get_material_info.js\"></script>
 
         ";
 

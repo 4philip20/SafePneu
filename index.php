@@ -16,11 +16,11 @@ class index
     }
 
     public function getParameter(){
-        if (!isset($_GET["kunnr"])) {      // Wenn nicht vorhanden
+        if (!isset($_GET["debitornr"])) {      // Wenn nicht vorhanden
             $GLOBALS['gv_kunnr'] ='0';
             $GLOBALS['gv_formular'] ='0';
         } else {
-            $GLOBALS['gv_kunnr'] = $_GET["kunnr"];
+            $GLOBALS['gv_kunnr'] = $_GET["debitornr"];
             $GLOBALS['gv_formular'] ='1';
         }
     }
@@ -32,7 +32,8 @@ class index
             <html lang='$this->gt_sprache'>
             <head>
                 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-                <link rel=\"stylesheet\" href=\"css/main.css\">
+              <!--  <link rel=\"stylesheet\" href=\"/assets/css/main.css\" type=\"text/css\"> -->
+                <link rel=\"stylesheet\" href=\"css/main.css\" type=\"text/css\">
 
 <!-- TODO Übersetzung
 <script type=\"text/javascript\">
@@ -57,7 +58,7 @@ class index
 
     public function setMenu(){
         $menu = new menu();
-        $lv_result = $menu->setMenu($this->gt_sprache);
+        $lv_result = $menu->setMenu();
         return $lv_result;
     }
 }

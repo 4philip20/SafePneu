@@ -1,5 +1,6 @@
 <?php
 //FORMULAR ausgabe nach Bedingung formlesen
+//TODO: Version 7
 if (!isset($_POST["formok"]) or $_POST["formok"] == '0'){
     $lv_formok = '0';
 }else{

@@ -41,9 +41,6 @@
 
 
 
-
-
-
 body {
     font-family: 'Open Sans',sans-serif;
     background-color: #F3f3f3;
@@ -116,15 +113,15 @@ h2{
 }
 
 .abschliessen-text{
-    width: 50%;
+    width: 80%;
     display: inline-block;
 }
 
 #myBtn{
     float: right;
-    position: absolute;
+    /* position: absolute;
     margin-top: 4%;
-    left: 1200px;
+    left: 1200px; */
     height: 36px;
     background: #1FA12E;
     border: 1px solid #1FA12E;
@@ -325,6 +322,36 @@ input:valid{
     color: #dc4140;
 }
 
+/* Falls verkäufer ud sonstige div nicht mehr floaten */
+
+@media only screen and (max-width: 1901px) {
+
+    .modal-content{
+        height: 2150px;
+        width: 500px;
+    }
+}
+
+/* Falls Hadyperspektive */
+/*
+@media only screen and (max-width: 800px) {
+
+    .modal-content{
+        height: 2150px;
+        width: 90%;
+    }
+
+    .float-verkaufer{
+        display: inline-block;
+    }
+
+
+
+}
+*/
+
+/* Falls Print CTRL+P */
+/*
 @media print {
     body * {
         visibility: hidden;
@@ -332,7 +359,6 @@ input:valid{
     }
     #person, #person * {
         visibility: visible;
-        /*color: white;*/
         margin: 0;
         font-family: 'Open Sans',sans-serif;
     }
@@ -349,8 +375,6 @@ input:valid{
         margin-right: 100px;
         font-family: 'Open Sans',sans-serif;
         width: 450px;
-        /*float: left;*/
-        /*height: 15000px;*/
 
     }
 
@@ -363,7 +387,6 @@ input:valid{
     .input{
         width: 400px;
         height: 32px;
-        /*margin-top: 8px;*/
         margin-bottom: 8px;
         padding-left: 6px;
         border: 1px solid #c1c1c1;
@@ -398,3 +421,4 @@ input:valid{
     }
 
 }
+*/
